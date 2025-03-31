@@ -43,12 +43,12 @@ const Hero = () => {
             <img
               src={mockupImage}
               alt="Mobile App Mockup 1"
-              className="w-[60%] md:w-[50%] transform hover:scale-105 transition-transform duration-300 z-10 rounded-[50px]"
+              className="w-[60%] md:w-[50%] transform hover:scale-105 transition-transform duration-300 z-10 rounded-[30px]"
             />
             <img
               src={mockupImage2}
               alt="Mobile App Mockup 2"
-              className="absolute w-[60%] md:w-[50%] transform hover:scale-105 transition-transform duration-300 left-[40%] top-[10%] rounded-[50px]"
+              className="absolute w-[60%] md:w-[50%] transform hover:scale-105 transition-transform duration-300 left-[40%] top-[10%] rounded-[30px]"
             />
           </div>
         </div>
