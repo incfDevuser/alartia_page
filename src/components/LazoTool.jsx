@@ -27,8 +27,7 @@ const LazoTool = () => {
           <img
             src={lazoTool2}
             alt="Lazo Tool Features"
-            className="absolute w-[3
-            5%] transform hover:scale-105 transition-transform duration-300 left-[50%] top-[15%] rounded-[10px]"
+            className="absolute w-[35%] transform hover:scale-105 transition-transform duration-300 left-[50%] top-[15%] rounded-[10px]"
           />
         </div>
 
