@@ -64,6 +64,46 @@ const ContactPage = () => {
                     required
                   />
                 </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Número Telefónico
+                    </label>
+                    <input
+                    type="tel"
+                    className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
+                    placeholder="+56 1 2345 6789"
+                    required
+                    />
+                    </div>
+               <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                  Tipo
+                  </label>
+                  <select
+                  className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
+                  required
+                  >
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="adminstracion">Administración</option>
+                    <option value="particular">Particular</option>
+                  </select>
+
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                   Propiedad
+                   </label>
+                   <select
+                    className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
+                    required
+                    >
+                      <option value="" disabled selected>Selecciona una opción</option>
+                      <option value="condominio">Condominio</option>
+                      <option value="edificio">Edificio</option>
+                      <option value="poblacion">Población</option>
+                    </select>
+                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
