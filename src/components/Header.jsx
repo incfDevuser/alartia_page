@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="flex justify-evenly items-center bg-white relative">
+    <nav className="flex justify-evenly items-center relative z-50 ">
       <div className="flex items-center">
         <img src={logoApp} alt="alartialogo.jpg" className="w-18" />
         <p className="text-2xl font-bold">Alartia</p>
@@ -61,22 +61,32 @@ const Header = () => {
         </Link>
       </div>
       <div
-        className={`${
-          isOpen ? "flex" : "hidden"
-        } absolute top-full left-0 right-0 flex-col items-center bg-white w-full shadow-lg md:hidden font-semibold`}
+        className={`absolute top-full left-0 right-0 flex-col items-center bg-white w-full shadow-lg md:hidden font-semibold overflow-hidden transition-all duration-500 ease-out ${
+          isOpen 
+            ? "max-h-[300px] opacity-100 translate-y-0" 
+            : "max-h-0 opacity-0 -translate-y-4"
+        }`}
       >
-        <a
-          onClick={scrollToContact}
-          className="w-full text-center py-3 hover:bg-gray-100 cursor-pointer"
-        >
-          Contacto
-        </a>
-        <Link
-          to="/quienes-somos"
-          className="w-full text-center py-3 hover:bg-gray-100"
-        >
-          Quienes Somos
-        </Link>
+        <div className="py-4">
+          <a
+            onClick={scrollToContact}
+            className="w-full text-center py-3 hover:bg-gray-100 cursor-pointer block"
+          >
+            ¿Quieres accedo anticipado?
+          </a>
+          <Link
+            to="/alianzas"
+            className="w-full text-center py-3 hover:bg-gray-100 block"
+          >
+            Alianzas
+          </Link>
+          <Link
+            to="/quienes-somos"
+            className="w-full text-center py-3 hover:bg-gray-100 block"
+          >
+            Nosotros
+          </Link>
+        </div>
       </div>
     </nav>
   );
