@@ -8,6 +8,13 @@ const Hero = () => {
       behavior: 'smooth' 
     });
   };
+
+  const scrollToContact = () => {
+    document.getElementById('contact').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  };
+
   return (
     <div className="relative bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +32,8 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 className="px-8 py-4 bg-blue-600 text-white rounded-lg 
-                hover:bg-blue-700 transition-colors duration-300 text-lg font-semibold"
+                hover:bg-blue-700 transition-colors duration-300 text-lg font-semibold cursor-pointer"
+                onClick={scrollToContact}   //para q el boton se redireccione a la seccion de contacto 
               >
                 Protege tu Comunidad
               </button>
