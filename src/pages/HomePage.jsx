@@ -9,6 +9,7 @@ import BuisnessSection from "../components/BuisnessSection";
 import ContactPage from "../components/ContactPage";
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
+import ComoFunciona from "../components/ComoFunciona";
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
         <Hero />
         <AboutAlertia />
         <Features />
+        <ComoFunciona />
         <LazoTool />
         <BuisnessSection />
         <OpenSourceSection />
