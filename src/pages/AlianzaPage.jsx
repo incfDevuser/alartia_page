@@ -30,6 +30,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-blue-500 to-blue-600",
       metrics: "Mejora hasta un 60% la efectividad de tus operativos",
+      pricing: {
+        suggested: "$150.000 CLP",
+      },
     },
     {
       icon: <FaLandmark className="w-12 h-12" />,
@@ -48,6 +51,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-purple-500 to-blue-500",
       metrics: "Reduce hasta 35% los incidentes en zonas críticas",
+      pricing: {
+        suggested: "$500.000 CLP",
+      },
     },
     {
       icon: <FaBuilding className="w-12 h-12" />,
@@ -66,6 +72,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-teal-500 to-blue-500",
       metrics: "Aumenta 45% la satisfacción de los residentes",
+      pricing: {
+        suggested: "$265.000 CLP",
+      },
     },
     {
       icon: <FaUsers className="w-12 h-12" />,
@@ -84,6 +93,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-blue-400 to-indigo-600",
       metrics: "Respuesta comunitaria un 50% más rápida",
+      pricing: {
+        suggested: "$40.000CLP",
+      },
     },
   ];
 
@@ -226,10 +238,25 @@ const AlianzaPage = () => {
                     {solution.metrics}
                   </p>
                 </div>
+
+                <div className="mt-6 border-t pt-6">
+                  <h4 className="text-lg font-semibold text-blue-600 mb-3">
+                    Inversión
+                  </h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">
+                        Valor de Integracion:
+                      </span>
+                      <span className="font-medium">
+                        {solution.pricing.suggested}
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
-
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
