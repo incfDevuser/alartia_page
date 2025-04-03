@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import mockupImage from "../../public/images/PaginaPrincipal.png";
 import mockupImage2 from "../../public/images/MapaPage.png";
 import onboarding from '../../public/images/Onboarding.png';
 const Hero = () => {
-  const scrollToFeatures = () => {
-    document.getElementById('features').scrollIntoView({ 
+  const [swapped, setSwapped] = useState(false);
+  
+
+  const scrollToComoFunciona = () => {
+    document.getElementById('como-funciona').scrollIntoView({ 
       behavior: 'smooth' 
     });
   };
@@ -25,9 +28,9 @@ const Hero = () => {
               <span className="block text-blue-600">Protegemos Vidas</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              Únete a la red de seguridad vecinal, ayudanos a crear un pais
-              seguro y conectado. Mantén tu comunidad segura con nuestra
-              tecnología de partiipacion colaborativa.
+              Únete a nuestra red de seguridad vecinal y ayúdanos a construir
+              un país más seguro y conectado. Mantén tu comunidad protegida 
+              con nuestra tecnología de participación colaborativa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -40,24 +43,40 @@ const Hero = () => {
               <button
                 className="px-8 py-4 bg-white border-2 border-blue-600 
                 text-blue-600 rounded-lg hover:bg-blue-50 
-                transition-colors duration-300 text-lg font-semibold"
-                onClick={scrollToFeatures}
+                transition-colors duration-300 text-lg font-semibold cursor-pointer"
+                onClick={scrollToComoFunciona}
               >
-                ¿Cómo Funciona?
+                ¿Cómo Funciona Nuestra App?
               </button>
             </div>
           </div>
-          <div className="flex-1 flex justify-center items-center relative">
-            <img
-              src={mockupImage}
-              alt="Mobile App Mockup 1"
-              className="w-[60%] md:w-[50%] transform hover:scale-105 transition-transform duration-300 z-10 rounded-[30px]"
-            />
-            <img
-              src={mockupImage2}
-              alt="Mobile App Mockup 2"
-              className="absolute w-[60%] md:w-[50%] transform hover:scale-105 transition-transform duration-300 left-[40%] top-[10%] rounded-[30px]"
-            />
+          <div 
+            className="flex-1 flex justify-center items-center relative h-[500px]"
+          >
+            <div 
+              className={`absolute transition-all duration-1400 ease-in-out ${
+                swapped ? 'left-[60%] top-[15%] z-10' : 'left-[30%] top-[0%] z-20'
+              }`}
+              onClick={() => setSwapped(prev => !prev)}
+            >
+              <img
+                src={mockupImage || "/placeholder.svg"}
+                alt="Mobile App Mockup 1"
+                className="w-[280px] md:w-[320px] transform hover:scale-105 transition-transform duration-300 rounded-[30px] cursor-pointer"
+              />
+            </div>
+            <div 
+              className={`absolute transition-all duration-1400 ease-in-out ${
+                swapped ? 'left-[30%] top-[0%] z-20' : 'left-[60%] top-[15%] z-10'
+              }`}
+              onClick={() => setSwapped(prev => !prev)}
+            >
+              <img
+                src={mockupImage2 || "/placeholder.svg"}
+                alt="Mobile App Mockup 2"
+                className="w-[280px] md:w-[320px] transform hover:scale-105 transition-transform duration-300 rounded-[30px] cursor-pointer"
+              />
+            </div>
           </div>
         </div>
       </div>
