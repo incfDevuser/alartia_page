@@ -13,6 +13,7 @@ const AboutAlertia = () => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-label="Icono de alertas en tiempo real"
         >
           <path
             strokeLinecap="round"
@@ -22,6 +23,9 @@ const AboutAlertia = () => {
           />
         </svg>
       ),
+      color: "bg-blue-50",
+      hoverColor: "hover:bg-blue-100",
+      iconColor: "text-blue-600",
     },
     {
       title: "Comunidad Segura",
@@ -34,6 +38,7 @@ const AboutAlertia = () => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-label="Icono de comunidad segura"
         >
           <path
             strokeLinecap="round"
@@ -43,6 +48,9 @@ const AboutAlertia = () => {
           />
         </svg>
       ),
+      color: "bg-green-50",
+      hoverColor: "hover:bg-green-100",
+      iconColor: "text-green-600",
     },
     {
       title: "Geolocalización",
@@ -55,6 +63,7 @@ const AboutAlertia = () => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-label="Icono de geolocalización"
         >
           <path
             strokeLinecap="round"
@@ -70,33 +79,47 @@ const AboutAlertia = () => {
           />
         </svg>
       ),
+      color: "bg-purple-50",
+      hoverColor: "hover:bg-purple-100",
+      iconColor: "text-purple-600",
     },
   ];
 
+  const scrollToContact = () => {
+    document.getElementById('contact').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  };
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50" id="acerca-de">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Acerca de Alartia
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-blue-600 font-semibold text-xl mb-4">
+            Tecnología colaborativa para comunidades más seguras
+          </p>
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
             Construimos tecnología que conecta y protege comunidades, creando
             entornos más seguros a través de la colaboración vecinal.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+              className={`${feature.color} p-6 rounded-lg shadow-sm ${feature.hoverColor} transition-all duration-300 transform hover:scale-105 hover:shadow-md border border-transparent hover:border-gray-200`}
             >
-              <div className="text-blue-600 mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <div className={`${feature.iconColor} rounded-full p-3 inline-block mb-4 bg-white shadow-sm`}>
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-700">{feature.description}</p>
             </div>
           ))}
         </div>
