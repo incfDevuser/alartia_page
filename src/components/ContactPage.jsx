@@ -1,159 +1,59 @@
-import React, { useEffect, useState } from "react";
-import { IoLogoLinkedin, IoSendOutline } from "react-icons/io5";
+import React from "react";
+import { IoLogoLinkedin, IoMailOutline } from "react-icons/io5";
 
 const ContactPage = () => {
-  const [description, setDescription] = useState("");
-  useEffect(() => {
-    const savedDescription = localStorage.getItem("contactDescription");
-    if (savedDescription) {
-      setDescription(savedDescription);
-      localStorage.removeItem("contactDescription");
-    }
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   return (
-    <section id="contact" className="relative bg-gray-50 py-24 rounded-2xl">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900">Contacto</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Estamos aquí para responder tus dudas, si quieres colaborar o alianza
+    <div id="contact" className="p-8 md:p-12 md:col-span-2 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg shadow-sm">
+      <div className="h-full flex flex-col justify-between items-center max-w-2xl mx-auto">
+        <div className="text-center w-full mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
+            Mantente en contacto con nosotros
+            </span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-gray-700 to-gray-500 mx-auto my-4 rounded-full"></div>
+          <p className="text-gray-600 text-lg max-w-md mx-auto">
+            Síguenos en LinkedIn para mantenerte al día con nuestras
+            últimas actualizaciones y novedades.
           </p>
         </div>
 
-        <div className="bg-white shadow-sm border border-gray-100 rounded-xl overflow-hidden">
-          <div className="grid md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-            <div className="p-8 md:col-span-3">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
-                      placeholder="Tu nombre"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Apellido
-                    </label>
-                    <input
-                      type="text"
-                      className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
-                      placeholder="Tu apellido"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Correo Electrónico
-                  </label>
-                  <input
-                    type="email"
-                    className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
-                    placeholder="tu@email.com"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Número Telefónico
-                    </label>
-                    <input
-                    type="tel"
-                    className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
-                    placeholder="+56 1 2345 6789"
-                    required
-                    />
-                    </div>
-               <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                  Tipo
-                  </label>
-                  <select
-                  className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
-                  required
-                  >
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="adminstracion">Administración</option>
-                    <option value="particular">Particular</option>
-                  </select>
-
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                   Propiedad
-                   </label>
-                   <select
-                    className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow"
-                    required
-                    >
-                      <option value="" disabled selected>Selecciona una opción</option>
-                      <option value="condominio">Condominio</option>
-                      <option value="edificio">Edificio</option>
-                      <option value="poblacion">Población</option>
-                    </select>
-                 </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Mensaje
-                  </label>
-                  <textarea
-                    className="mt-1 w-full px-4 py-3 bg-gray-50 border-0 rounded focus:ring-1 focus:ring-gray-900 transition-shadow h-32"
-                    placeholder="¿Cómo podemos ayudarte?"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 bg-gray-900 text-white rounded hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
-                >
-                  <IoSendOutline className="text-lg" />
-                  Enviar mensaje
-                </button>
-              </form>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full max-w-xl mt-6">
+          <a
+            href="mailto:alartiacontacto@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center px-8 py-4 border-2 border-gray-800 bg-white text-gray-800 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div className="relative">
+              <span className="absolute -inset-1 rounded-full bg-gray-200 opacity-0 group-hover:opacity-20 group-hover:blur-sm transition-all duration-300"></span>
+              <IoMailOutline className="text-2xl mr-3 group-hover:scale-110 transition-transform" />
             </div>
-            <div className="p-8 md:col-span-2 bg-gray-50">
-              <div className="h-full flex flex-col justify-between">
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    Conecta con nosotros
-                  </h3>
-                  <p className="text-gray-600">
-                    Síguenos en LinkedIn para mantenerte al día con nuestras
-                    últimas actualizaciones y novedades.
-                  </p>
-                </div>
-
-                <a
-                  href="https://www.linkedin.com/company/alartia-chile/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 mt-8 border border-gray-900 text-gray-900 rounded hover:bg-gray-900 hover:text-white transition-all group"
-                >
-                  <IoLogoLinkedin className="text-xl mr-2 group-hover:scale-110 transition-transform" />
-                  LinkedIn
-                </a>
-              </div>
+            <span className="font-medium">Contáctanos por email</span>
+          </a>
+          
+          <a
+            href="https://www.linkedin.com/company/alartia-chile/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center px-8 py-4 border-2 border-gray-800 bg-white text-gray-800 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div className="relative">
+              <span className="absolute -inset-1 rounded-full bg-gray-200 opacity-0 group-hover:opacity-20 group-hover:blur-sm transition-all duration-300"></span>
+              <IoLogoLinkedin className="text-2xl mr-3 group-hover:scale-110 transition-transform" />
             </div>
-          </div>
+            <span className="font-medium">LinkedIn</span>
+          </a>
+        </div>
+
+        <div className="mt-10 w-full">
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+          <p className="text-gray-500 text-sm mt-6 text-center">
+            Estamos listos para responder a tus consultas y ayudarte en lo que necesites
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

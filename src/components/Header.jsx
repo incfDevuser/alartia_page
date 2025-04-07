@@ -81,7 +81,7 @@ const Header = () => {
           onClick={scrollToContact}
           className="text-gray-700 hover:text-blue-600 font-semibold cursor-pointer transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
         >
-          ¿Quieres accedo anticipado?
+          ¿Quieres acceso anticipado?
         </a>
         <Link
           to="/alianzas"

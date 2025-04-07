@@ -65,8 +65,8 @@ const BuisnessSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={scrollToContact}
-              className="px-8 py-4 bg-white text-blue-900 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-white text-blue-900 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
             >
               Solicitar Acceso Anticipado
             </button>
