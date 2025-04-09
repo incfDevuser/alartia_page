@@ -30,12 +30,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-blue-500 to-blue-600",
       metrics: "Mejora la efectividad de tus operativos",
-      pricing: {
-        suggested: "$150.000 CLP",
-        pilot: "¡Gratis por 3 meses en plan piloto!",
-      },
+      pilot: "¡Programa piloto por tiempo limitado!",
       urgencyTag: "Piloto Disponible",
-      customCTA: "Aplicar a Piloto",
+      customCTA: "Solicitar Información",
     },
     {
       icon: <FaLandmark className="w-12 h-12" />,
@@ -54,12 +51,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-purple-500 to-blue-500",
       metrics: "Reduce hasta 35% los incidentes en zonas críticas",
-      pricing: {
-        suggested: "$500.000 CLP",
-        pilot: "¡Gratis por 3 meses en plan piloto!",
-      },
+      pilot: "¡Programa piloto por tiempo limitado!",
       urgencyTag: "Piloto Disponible",
-      customCTA: "Aplicar a Piloto",
+      customCTA: "Solicitar Información",
     },
     {
       icon: <FaBuilding className="w-12 h-12" />,
@@ -78,12 +72,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-teal-500 to-blue-500",
       metrics: "Aumenta la satisfacción de los residentes",
-      pricing: {
-        suggested: "$265.000 CLP",
-        pilot: "¡Gratis por 3 meses en plan piloto!",
-      },
+      pilot: "¡Programa piloto por tiempo limitado!",
       urgencyTag: "Piloto Disponible",
-      customCTA: "Aplicar a Piloto",
+      customCTA: "Solicitar Información",
     },
     {
       icon: <FaUsers className="w-12 h-12" />,
@@ -102,12 +93,9 @@ const AlianzaPage = () => {
       ],
       gradient: "from-blue-400 to-indigo-600",
       metrics: "Respuesta comunitaria más rápida",
-      pricing: {
-        suggested: "$40.000CLP",
-        pilot: "¡Gratis por 3 meses en plan piloto!",
-      },
+      pilot: "¡Programa piloto por tiempo limitado!",
       urgencyTag: "Piloto Disponible",
-      customCTA: "Aplicar a Piloto",
+      customCTA: "Solicitar Información",
     },
   ];
 
@@ -160,11 +148,12 @@ const AlianzaPage = () => {
               transition={{ delay: 0.3 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              🔥 <span className="font-bold text-red-600">URGENTE:</span> El crimen evoluciona,
-              ¿y tu estrategia de seguridad? La tecnología predictiva ya no es opcional.
+              🔥 <span className="font-bold text-red-600">URGENTE:</span> El
+              crimen evoluciona, ¿y tu estrategia de seguridad? La tecnología
+              predictiva ya no es opcional.
               <span className="block font-semibold mt-2 text-blue-700">
-                Los early adopters están viendo resultados extraordinarios.
-                No esperes a que tu competencia tome la delantera.
+                Los early adopters están viendo resultados extraordinarios. No
+                esperes a que tu competencia tome la delantera.
               </span>
             </motion.p>
           </motion.div>
@@ -257,27 +246,20 @@ const AlianzaPage = () => {
                   </p>
                 </div>
 
-                <div className="mt-6 border-t pt-6">
-                  <h4 className="text-lg font-semibold text-blue-600 mb-3">
-                    Inversión Estratégica
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
-                      <span className="text-gray-600">Valor Regular:</span>
-                      <span className="text-xl font-bold text-blue-700">
-                        {solution.pricing.suggested}
-                      </span>
-                    </div>
-                    <div className="bg-green-50 p-3 rounded-lg">
+                <div className="mt-6 pt-6">
+                  <div>
+                    <div className="bg-green-50 p-4 rounded-lg mb-4">
                       <p className="text-green-700 font-medium text-center">
-                        ⭐ {solution.pricing.pilot}
+                        ⭐ {solution.pilot}
                       </p>
                     </div>
+                    <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all flex items-center justify-center gap-2">
+                      {solution.customCTA}
+                      <span className="text-sm bg-white/20 px-2 py-1 rounded">
+                        Beta
+                      </span>
+                    </button>
                   </div>
-                  <button className="w-full mt-4 bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all flex items-center justify-center gap-2">
-                    {solution.customCTA}
-                    <span className="text-sm bg-white/20 px-2 py-1 rounded">Beta</span>
-                  </button>
                 </div>
               </motion.div>
             ))}
@@ -292,8 +274,9 @@ const AlianzaPage = () => {
               Sé parte del futuro de la seguridad comunitaria
             </h2>
             <p className="text-xl mb-8">
-              🎯 Únete a nuestro programa piloto y obtén acceso privilegiado a 
-              <span className="font-bold"> Alartia</span> sin costo por tiempo limitado
+              🎯 Únete a nuestro programa piloto y obtén acceso privilegiado a
+              <span className="font-bold"> Alartia</span> sin costo por tiempo
+              limitado
             </p>
             <div className="flex gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all">

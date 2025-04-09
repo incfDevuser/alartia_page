@@ -339,13 +339,6 @@ const ComoFunciona = () => {
                       </h3>
                     </div>
                   </div>
-                  <div className="flex-shrink-0">
-                    {feature.isNew && (
-                      <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold animate-pulse">
-                        NUEVO
-                      </span>
-                    )}
-                  </div>
                 </div>
                 
                 <div className="bg-gray-50 p-4 rounded-xl mb-6 min-h-[80px] flex items-center">
