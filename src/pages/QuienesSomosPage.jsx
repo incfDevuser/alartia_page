@@ -112,44 +112,51 @@ const QuienesSomosPage = () => {
               {[
                 {
                   name: "Martin Gomez",
-                  role: "CEO & Ingeniero de Software",
+                  role: "CEO - Director General y Arquitecto de Software",
                   description:
-                    "Visionario tecnológico que combina innovación con impacto social. Especialista en desarrollo de software y arquitectura de sistemas seguros.",
+                    "Líder visionario especializado en arquitectura de sistemas seguros y desarrollo de soluciones innovadoras. Impulsor de la transformación digital.",
                   gradient: "from-blue-500 to-blue-600",
                 },
                 {
                   name: "Cristobal Hachim",
-                  role: "CEO & Ingeniero de Datos",
+                  role: "CEO - Director Ejecutivo y Especialista en Datos",
                   description:
-                    "Experto en análisis de datos y sistemas predictivos. Apasionado por convertir información en soluciones que salvan vidas.",
+                    "Estratega digital enfocado en el crecimiento empresarial y la optimización de procesos. Experto en la implementación de soluciones basadas en datos.",
+                  gradient: "from-blue-600 to-blue-700",
+                },
+                {
+                  name: "Cristopher Arredondo",
+                  role: "CTO - Director de Tecnología y Analista de Datos",
+                  description:
+                    "Pionero en la implementación de tecnologías emergentes y sistemas predictivos. Especialista en integración de soluciones de seguridad avanzadas.",
                   gradient: "from-blue-600 to-blue-700",
                 },
                 {
                   name: "Benjamin Peña",
-                  role: "Ingeniero BI",
+                  role: "CMO - Director de Marketing y Analista de Negocios",
                   description:
-                    "Especialista en Business Intelligence, transformando datos complejos en insights accionables para mejorar la seguridad comunitaria.",
+                    "Estratega de marketing digital con enfoque en el análisis de datos y comportamiento del usuario. Experto en desarrollo de estrategias de crecimiento basadas en métricas.",
                   gradient: "from-purple-500 to-blue-500",
                 },
                 {
                   name: "Matias Muñoz",
-                  role: "Analista de Datos",
+                  role: "CFO - Director Financiero y Científico de Datos",
                   description:
-                    "Experto en análisis predictivo y modelado de datos, enfocado en identificar patrones para prevención de incidentes.",
+                    "Especialista en análisis financiero y gestión de recursos empresariales. Experto en la optimización de costos y previsión financiera mediante análisis de datos.",
                   gradient: "from-teal-500 to-blue-500",
                 },
                 {
                   name: "Cristobal Flores",
-                  role: "Analista de Datos",
+                  role: "COO - Director de Operaciones y Analista de Sistemas",
                   description:
-                    "Especializado en análisis estadístico y visualización de datos para la toma de decisiones estratégicas en seguridad.",
+                    "Maestro en la optimización de procesos operativos y gestión de recursos tecnológicos. Especializado en la implementación de sistemas de monitoreo en tiempo real.",
                   gradient: "from-blue-400 to-indigo-600",
                 },
                 {
                   name: "Francisco Morales",
-                  role: "Diseñador UX/UI Jr",
+                  role: "CIO - Director de Innovación y Diseñador de Experiencia de Usuario",
                   description:
-                    "Creativo diseñador enfocado en crear experiencias intuitivas y accesibles que facilitan la seguridad comunitaria.",
+                    "Innovador en diseño de interfaces centradas en el usuario y experiencias digitales. Especialista en la creación de soluciones tecnológicas intuitivas y accesibles.",
                   gradient: "from-indigo-500 to-purple-600",
                 },
               ].map((member, index) => (
